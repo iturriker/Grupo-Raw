@@ -1,15 +1,15 @@
-.license {
+.author {
     color: white;
     text-align: center;
     padding: 10px;
 }
 
-.license > a {
+.author > a {
     display: inline-block;
     color: inherit;
     transition: color 0.3s ease;
 }
 
-.license > a:hover {
+.author > a:hover {
     color: var(--green);
 }
