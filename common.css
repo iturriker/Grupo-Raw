@@ -70,6 +70,42 @@ h1, h2, h3, h4, h5, h6, p {
     padding: 0;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    text-transform: uppercase;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    padding: 20px 10px;
+}
+
+h3 {
+    font-size: 1.4rem;
+    font-weight: 500;
+    padding: 10px;
+}
+
+p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 150%;
+    padding: 10px;  
+}
+
+a {
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+span {
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 150%;
+}
+
 input,
 textarea,
 button {
@@ -94,8 +130,14 @@ header {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 10px clamp(10px, 7.5%, 100px);
+    padding: 25px clamp(10px, 7.5%, 100px);
     z-index: 2;
+    background:
+        linear-gradient(0deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 1) 100%),
+        linear-gradient(0deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 1) 100%);
+    background-size: 100% 200%;
+    background-position-y: 100%;
+    background-repeat: repeat;
     transition: background 0.3s ease;
 }
 
@@ -143,6 +185,10 @@ header {
     color: var(--green);
 }
 
+header.opaque {
+    background-position-y: 0%;
+}
+
 /* Used In Javascript for rechild links */
 .header-menu {
     position: absolute;
@@ -151,16 +197,20 @@ header {
     align-items: flex-end;
     top: 0;
     right: 0;
-    padding: 25px 2dvw 2dvh 2dvw;
-    background-color: rgba(0, 0, 0, 0.8);
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 1) 100%);
+    background-size: 200% 100%;
+    background-position-x: 100%;
+    background-repeat: repeat;
+    padding: 15px 2dvw 2dvh 2dvw;
     gap: clamp(10px, 2dvw, 50px);
     transition: background 0.3s ease;
 }
 
 .header-menu.hidden {
-    background-color: transparent;
+    background-position-x: 0%;
 }
 
 .header-menu > ul {
@@ -227,38 +277,60 @@ header {
 
 /*HERO*/
 .hero-section {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    color: white;
-    padding-top: 25dvh;
-    padding-bottom: 25dvh;
     text-align: center;
+    color: white;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-blend-mode: multiply;
+    background-blend-mode: overlay;
     background-color: transparent;
+    padding-top: 25dvh;
+    padding-bottom: 40dvh;
     height: 100dvh;
 }
 
+.hero-section.gradient::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40%;
+    background-image: linear-gradient(0deg,
+    hsl(0, 0%, 100%) 0%,
+    hsla(0, 0%, 100%, 0.738) 19%,
+    hsla(0, 0%, 100%, 0.541) 34%,
+    hsla(0, 0%, 100%, 0.382) 47%,
+    hsla(0, 0%, 100%, 0.278) 56.5%,
+    hsla(0, 0%, 100%, 0.194) 65%,
+    hsla(0, 0%, 100%, 0.126) 73%,
+    hsla(0, 0%, 100%, 0.075) 80.2%,
+    hsla(0, 0%, 100%, 0.042) 86.1%,
+    hsla(0, 0%, 100%, 0.021) 91%,
+    hsla(0, 0%, 100%, 0.008) 95.2%,
+    hsla(0, 0%, 100%, 0.002) 98.2%,
+    hsla(0, 0%, 100%, 0) 100%
+    );
+}
+
 .hero-section > h2 {
-    font-family: "Bebas Neue", Sans-serif;
-    text-transform: uppercase;
     text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
     letter-spacing: 0.2rem;
-    line-height: 100%;
-    font-size: clamp(2rem, 7rem, 15dvw);
-    font-weight: 400;
+    font-size: clamp(1rem, 5rem, 9dvw);
+    font-weight: 600;
+    color: white;
 }
 
 .hero-section > p {
     text-transform: uppercase;
     text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
-    line-height: 100%;
-    font-size: clamp(1rem, 2rem, 10dvw);
+    font-size: clamp(1rem, 2rem, 7.5dvw);
     font-weight: 400;
+    color: white;
 }
 
 /*FOOTER*/
@@ -266,10 +338,10 @@ footer {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url(https://gruporaw.com/wp-content/uploads/2024/09/Black-Concrete-copia.webp);
+    background-color: black;
 }
 
-.legal-section {
+.legal-wrap {
     color: white;
 }
 
@@ -331,9 +403,4 @@ footer {
 .long-pad-S {
     padding-top: 15px;
     padding-bottom: 15px;
-}
-
-/*JAVASCRIPT CLASSES*/
-.opaque {
-    background-color: black;
 }
