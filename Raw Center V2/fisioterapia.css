@@ -1,0 +1,71 @@
+.hero-section {
+    background-image: url(https://gruporaw.com/wp-content/uploads/2024/09/pexels-stephanie-allen-2464226-4085450.webp);
+}
+
+.benefits-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    padding: 20px 0px;
+    gap: clamp(30px, 5%, 100px);
+}
+
+.benefits-wrap > img {
+    flex: 0.5 1 280px;
+    border-radius: 20px;
+}
+
+.benefits-text-wrap {
+    flex: 1 1 280px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.benefits-text-wrap > p {
+    font-size: 1.4rem;
+}
+
+.benefits-text-wrap > a {
+    width: fit-content;
+    font-size: 1.2rem;
+    color: black;
+    background-color: var(--green);
+    border-radius: 30px;
+    padding: 15px 30px;
+    transition: color 0.3s ease, background 0.3s ease;
+}
+
+.benefits-text-wrap > a:hover,
+.benefits-text-wrap > a:focus {
+    background-color: black;
+    color: var(--green);
+}
+
+.service-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: clamp(30px, 2dvw, 100px);
+}
+
+.service-section > div {
+    display: flex;
+    flex-direction: column;
+    align-content: start;
+    justify-items: center;
+    text-align: center;
+    width: clamp(200px, 23%, 500px);
+    gap: 30px;
+}
+
+.service-section > div > img {
+    height: 150px;
+    object-fit: contain;
+}
+
+.service-section > div > p {
+    color: black;
+}

@@ -1,0 +1,106 @@
+:root {
+    font-family: "Roboto", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.2rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, minmax(400px, 1fr));
+    height: 100dvh;
+}
+
+.grid > a {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    overflow: hidden;
+}
+
+.grid > a:nth-child(n) {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-color: rgba(0, 0, 0, 0.35);
+    transition: background 0.3s ease;
+}
+
+.grid > a:nth-child(n):hover {
+    background-color: rgba(0, 0, 0, 0.65);
+}
+
+.grid > a:nth-child(1) {
+    background-image: url(https://gruporaw.com/wp-content/uploads/2024/10/IMG_8784-1-1-e1728051874208.jpg);
+}
+.grid > a:nth-child(2) {
+    background-image: url(https://gruporaw.com/wp-content/uploads/2024/10/PSX_20240328_030834-1-1-1-scaled.jpg);
+}
+.grid > a:nth-child(3) {
+    background-image: url(https://gruporaw.com/wp-content/uploads/2024/10/DSC_9077-1.jpg);
+}
+
+.grid-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+
+.grid-wrap > p {
+    color: white;
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+    padding: 20px clamp(5px, 10%, 50px);
+    transition: transform 0.3s ease;
+    line-height: 200%;
+}
+
+.grid-image {
+    width: 100%;
+    transform-origin: top left;
+    text-align: center;
+    line-height: 0;
+    padding: 20px clamp(5px, 10%, 50px);
+    transition: transform 0.3s ease;
+}
+
+.grid-image > img {
+    width: 100%;
+}
+
+@media (width < 768px)
+{
+    .grid-image > img {
+        width: clamp(250px, 70%, 500px);
+    }
+}
+
+@media (768px <= width < 1200px)
+{
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+    }
+
+    .grid-wrap > p {
+        transform: translateY(200%);
+    }
+
+    .grid-image {
+        width: 400px;
+        transform: translateY(100dvh) rotate(-90deg);
+    }
+}
+
+@media (width >= 1200px)
+{
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+    }
+}
