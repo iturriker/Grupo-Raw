@@ -1,5 +1,12 @@
 # Project Disclaimer
 
-This web project is created solely for learning purposes and is not intended to be a fully functional or error-free replication of any original website. It may contain inaccuracies, incomplete features, and bugs. Please use it with this understanding in mind.  
+This web project is created solely for learning purposes and is inspired by the design and functionality of [Grupo Raw's website](https://gruporaw.com/).
 
-Thank you for your interest!
+> [!NOTE]
+> This project is not affiliated with or endorsed by Grupo Raw.
+
+> It may contain inaccuracies, incomplete features, and bugs.
+
+> It is not intended to be an exact or error-free replication of the original website.
+
+Thank you for your understanding and interest!
