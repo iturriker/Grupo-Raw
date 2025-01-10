@@ -16,9 +16,13 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(calc(215px + 15%), 1fr));
     align-items: center;
-    width: 100%;
     text-align: center;
+    width: 100%;
     gap: 10px;
+}
+
+.train-list-item div {
+    padding: clamp(15px, 5%, 50px);
 }
 
 .train-list-item img {
@@ -31,9 +35,4 @@
 .train-list-item:nth-child(even) img {
     grid-column: 1;
     grid-row: 1;
-}
-
-.train-list-item p {
-    font-size: 1.2rem;
-    padding: 10px;
 }

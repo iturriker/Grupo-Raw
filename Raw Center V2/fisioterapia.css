@@ -1,47 +1,22 @@
 .hero-section {
-    background-image: url(https://gruporaw.com/wp-content/uploads/2024/09/pexels-stephanie-allen-2464226-4085450.webp);
+    background-image: url(../Media/conscious-design-ubeslMfS1lk-unsplash.jpg);
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
-.benefits-wrap {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+.fisio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(calc(215px + 15%), 1fr));
     align-items: center;
-    color: black;
+    gap: clamp(20px, 3dvw, 100px);
     padding: 20px 0px;
-    gap: clamp(30px, 5%, 100px);
 }
 
-.benefits-wrap > img {
-    flex: 0.5 1 280px;
-    border-radius: 20px;
-}
-
-.benefits-text-wrap {
-    flex: 1 1 280px;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-
-.benefits-text-wrap > p {
-    font-size: 1.4rem;
-}
-
-.benefits-text-wrap > a {
-    width: fit-content;
-    font-size: 1.2rem;
-    color: black;
-    background-color: var(--green);
-    border-radius: 30px;
-    padding: 15px 30px;
-    transition: color 0.3s ease, background 0.3s ease;
-}
-
-.benefits-text-wrap > a:hover,
-.benefits-text-wrap > a:focus {
-    background-color: black;
-    color: var(--green);
+.fisio-grid > img {
+    grid-row: auto / span 2;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 .service-section {
@@ -64,8 +39,4 @@
 .service-section > div > img {
     height: 150px;
     object-fit: contain;
-}
-
-.service-section > div > p {
-    color: black;
 }

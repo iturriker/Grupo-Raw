@@ -1,18 +1,39 @@
-body {
-    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 10%, rgba(21, 56, 12, 0.8) 100%);
-}
-
 .hero-section {
+    position: relative;
+    background-image: url(../Media/victor-freitas-hOuJYX2K5DA-unsplash.jpg);
     padding-top: 25dvh;
     padding-bottom: 15dvh;
     height: 70dvh;
 }
 
+.hero-section::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40%;
+    background-image: linear-gradient(0deg,
+        rgba(var(--R), var(--G), var(--B), 1) 0%,
+        rgba(var(--R), var(--G), var(--B), 0.738) 19%,
+        rgba(var(--R), var(--G), var(--B), 0.541) 34%,
+        rgba(var(--R), var(--G), var(--B), 0.382) 47%,
+        rgba(var(--R), var(--G), var(--B), 0.278) 56.5%,
+        rgba(var(--R), var(--G), var(--B), 0.194) 65%,
+        rgba(var(--R), var(--G), var(--B), 0.126) 73%,
+        rgba(var(--R), var(--G), var(--B), 0.075) 80.2%,
+        rgba(var(--R), var(--G), var(--B), 0.042) 86.1%,
+        rgba(var(--R), var(--G), var(--B), 0.021) 91%,
+        rgba(var(--R), var(--G), var(--B), 0.008) 95.2%,
+        rgba(var(--R), var(--G), var(--B), 0.002) 98.2%,
+        rgba(var(--R), var(--G), var(--B), 0) 100%
+    );
+}
+
 .contact-section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 20px;
+    color: white;
+    background-color: var(--color);
     gap: clamp(20px, 5%, 100px);
 }
 
@@ -39,11 +60,9 @@ body {
 .contact-form > input,
 .contact-form > textarea,
 .contact-form > button {
-    font-family: "Montserrat", Sans-serif;
-    font-size: 1.1rem;
     border-radius: 30px;
     padding: 20px 25px;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, background 0.3s ease;
 }
 
 .contact-form > textarea,
@@ -52,14 +71,24 @@ body {
 }
 
 .contact-form > button {
-    text-align: center;
-    color: white;
-    background-color: var(--green);
+    background-color: white;
+    color: black;
 }
 
 .contact-form > input:focus::placeholder,
 .contact-form > textarea:focus::placeholder {
-    color: var(--green);
+    color: var(--color);
+}
+
+.contact-form > button:hover,
+.contact-form > button:focus {
+    background-color: white;
+    color: var(--color);
+}
+
+.info-section {
+    color: white;
+    background-color: var(--color);
 }
 
 .info-list {
@@ -82,7 +111,6 @@ body {
 .info-list > li > span {
     display: block;
     font-size: 1.2rem;
-    color: white;
     padding: 5px 0;
 }
 
@@ -90,13 +118,12 @@ body {
     display: block;
     width: fit-content;
     font-size: 1.2rem;
-    color: white;
     padding: 5px 0;
     transition: color 0.3s ease;
 }
 
 .info-list > li > a:hover {
-    color: var(--green);
+    color: black;
 }
 
 .social-list {
@@ -123,5 +150,5 @@ body {
 }
 
 .social-list > li > a > svg:hover {
-    fill: var(--green);
+    fill: black;
 }

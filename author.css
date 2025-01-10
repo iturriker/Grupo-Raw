@@ -11,5 +11,5 @@
 }
 
 .author > a:hover {
-    color: var(--green);
+    color: var(--color);
 }

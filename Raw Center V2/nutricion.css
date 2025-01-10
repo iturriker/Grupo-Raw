@@ -1,5 +1,6 @@
 .hero-section {
     background-image: url(https://gruporaw.com/wp-content/uploads/2024/11/Presentacion-alimentacion-y-nutricion-elegante-y-versatil-fondo-fotografico.jpg);
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 .nutri-grid {
@@ -8,11 +9,6 @@
     align-items: center;
     gap: clamp(20px, 3dvw, 100px);
     padding: 20px 0px;
-}
-
-.nutri-grid > p {
-    font-size: 1.2rem;
-    color: black;
 }
 
 .nutri-grid > img {
@@ -43,9 +39,4 @@
 .service-section > div > img {
     height: 150px;
     object-fit: contain;
-}
-
-.service-section > div > p {
-    font-size: 1.2rem;
-    color: black;
 }
