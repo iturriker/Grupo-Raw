@@ -196,6 +196,12 @@ header {
     color: var(--color);
 }
 
+/* Used In Javascript for recolor lastlink */
+.header-list > li > a.lastlink {
+    transition: color 0s ease;
+    color: var(--color);
+}
+
 .header-list > li:last-child > a {
     border-radius: 10px;
     background-color: var(--color);
