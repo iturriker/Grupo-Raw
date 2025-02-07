@@ -22,18 +22,6 @@
     initial-value: rgba(80, 121, 66, 1);
 }
 
-/*@property --blue {
-    syntax: "<color>";
-    inherits: true;
-    initial-value: rgba(49, 108, 243, 1);
-}*/
-
-/*@property --red {
-    syntax: "<color>";
-    inherits: true;
-    initial-value: rgba(192, 4, 4, 1);
-}*/
-
 /*GENERAL*/
 *, *:before, *:after {
     box-sizing: border-box;
@@ -58,7 +46,7 @@ html, body, header, footer, main, section, footer, div, strong {
 }
 
 ul {
-    list-style: none; /* Quita los puntos de la lista */
+    list-style: none;
     margin: 0;
     padding: 0;
 }
@@ -70,7 +58,7 @@ li {
 
 a {
     display: block;
-    text-decoration: none; /* Quita el subrayado */
+    text-decoration: none;
     margin: 0;
     padding: 0;
 }
@@ -142,7 +130,7 @@ button {
 }
 
 textarea {
-    resize: none; /* Desactiva el icono para redimensionar */
+    resize: none;
 }
 
 button {
@@ -258,11 +246,11 @@ header.opaque {
     cursor: pointer;
     max-width: 60px;
     min-width: 60px;
-    transition: opacity 0.3s ease, transform 0.3s ease, scale 0.3s ease;
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .burger:hover {
-    scale: 1.1;
+    transform: scale(1.1);
 }
 
 .burger.hidden {
@@ -292,17 +280,17 @@ header.opaque {
 }
 
 .burger.active > :nth-child(1) {
-    transform: translate(0%, 25%) rotate(-45deg) scale(120%);
+    transform: translate(0%, 25%) rotate(-45deg) scale(1.2);
     stroke: white;
 }
 
 .burger.active > :nth-child(2) {
     opacity: 0;
-    transform: scale(0%);
+    transform: scale(0);
 }
 
 .burger.active > :nth-child(3) {
-    transform: translate(0%, -25%) rotate(45deg) scale(120%);
+    transform: translate(0%, -25%) rotate(45deg) scale(1.2);
     stroke: white;
 }
 
@@ -409,7 +397,7 @@ footer {
 .visually-hidden {
     position: absolute;
     overflow: hidden;
-    clip: rect(0 0 0 0);
+    clip-path: inset(0);
     white-space: nowrap;
     width: 1px;
     height: 1px;

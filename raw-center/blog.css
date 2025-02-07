@@ -1,0 +1,66 @@
+.hero-section {
+    background-image: url(https://gruporaw.com/wp-content/uploads/2024/09/entrenamiento.webp);
+    padding-top: 25dvh;
+    padding-bottom: 15dvh;
+    height: 70dvh;
+}
+
+.entries-wrap {
+    display: flex;
+    justify-content: center;
+    color: white;
+    padding: 20px 0px;
+    gap: clamp(20px, 5%, 100px);
+}
+
+.entries-wrap > a {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 30px;
+    background-color: var(--color);
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.5);
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.entries-wrap > a:hover {
+    transform: scale(1.05);
+}
+
+.entries-wrap > a > div > h3 {
+    padding: 20px 20px 10px 20px;
+}
+
+.entries-wrap > a > div > p {
+    text-align: center;
+    padding: 10px 20px 30px 20px;
+}
+
+.entries-wrap > a > img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+@media (width <= 800px) {
+    .entries-wrap {
+        flex-direction: column;
+    }
+}
+
+@media (800px < width <= 1400px) {
+    .entries-wrap {
+        flex-direction: column;
+    }
+    .entries-wrap > a {
+        flex-direction: row;
+        align-items: center;
+    }
+    .entries-wrap > a > img {
+        width: 50%;
+    }
+    .entries-wrap > a > div {
+        width: 50%;
+    }
+}

@@ -19,8 +19,9 @@ Below are the features and tasks pending for this project:
 
 - [ ] Optimize image format and sizes for faster loading times
 - [ ] Test cross-browser compatibility
-- [ ] Refactor CSS for better readability and maintainability
-- [ ] Minify CSS and HTML
+- [ ] Refactor CSS and Javascript for better readability and maintainability
+- [ ] Minify CSS, HTML and JS
 - [ ] Adjust contrast for white text to improve readability
+- [ ] Populate alt attribute on images
 
 This list may evolve as the project progresses.  

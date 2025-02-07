@@ -1,5 +1,5 @@
 .hero-section {
-    background-image: url(../Media/victor-freitas-KIzBvHNe7hY-unsplash.jpg);
+    background-image: url(../images/victor-freitas-KIzBvHNe7hY-unsplash.jpg);
 }
 
 .services-wrap {
@@ -22,7 +22,7 @@
 }
 
 .services-wrap > a:hover {
-    transform: scale(105%);
+    transform: scale(1.05);
 }
 
 .services-wrap > a > div > h3 {
